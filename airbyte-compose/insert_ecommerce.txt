@@ -1,0 +1,129 @@
+/* Insert into cliente */
+INSERT INTO cliente (id_cliente, nome, email) VALUES
+(1, 'John Doe', 'john@example.com'),
+(2, 'Jane Smith', 'jane@example.com'),
+(3, 'Robert Brown', 'robert@example.com'),
+(4, 'Emily White', 'emily@example.com'),
+(5, 'Michael Green', 'michael@example.com'),
+(6, 'Sophia Black', 'sophia@example.com'),
+(7, 'David Blue', 'david@example.com'),
+(8, 'Laura Grey', 'laura@example.com'),
+(9, 'James Silver', 'james@example.com'),
+(10, 'Olivia Gold', 'olivia@example.com');
+
+/* Insert into endereco */
+INSERT INTO endereco (id_endereco, numero, rua, bairro, cep, id_cliente) VALUES
+(1, 101, 'Main St', 'Downtown', '12345', 1),
+(2, 202, 'Second St', 'Uptown', '23456', 2),
+(3, 303, 'Third St', 'Suburbia', '34567', 3),
+(4, 404, 'Fourth St', 'Riverside', '45678', 4),
+(5, 505, 'Fifth St', 'Mountainside', '56789', 5),
+(6, 606, 'Sixth St', 'Lakeside', '67890', 6),
+(7, 707, 'Seventh St', 'Countryside', '78901', 7),
+(8, 808, 'Eighth St', 'Valley', '89012', 8),
+(9, 909, 'Ninth St', 'Hilltop', '90123', 9),
+(10, 1010, 'Tenth St', 'Beachfront', '01234', 10);
+
+/* Insert into cidade */
+INSERT INTO cidade (id_cidade, nome, id_endereco) VALUES
+(1, 'New York', 1),
+(2, 'Los Angeles', 2),
+(3, 'Chicago', 3),
+(4, 'Houston', 4),
+(5, 'Phoenix', 5),
+(6, 'Philadelphia', 6),
+(7, 'San Antonio', 7),
+(8, 'San Diego', 8),
+(9, 'Dallas', 9),
+(10, 'San Jose', 10);
+
+/* Insert into estado */
+INSERT INTO estado (id_estado, nome, id_cidade) VALUES
+(1, 'New York', 1),
+(2, 'California', 2),
+(3, 'Illinois', 3),
+(4, 'Texas', 4),
+(5, 'Arizona', 5),
+(6, 'Pennsylvania', 6),
+(7, 'Texas', 7),
+(8, 'California', 8),
+(9, 'Texas', 9),
+(10, 'California', 10);
+
+/* Insert into tipo_pagamento */
+INSERT INTO tipo_pagamento (id_tipo_pagamento, tipo_pagamento) VALUES
+(1, 'Credit Card'),
+(2, 'Debit Card'),
+(3, 'PayPal'),
+(4, 'Bank Transfer'),
+(5, 'Cash'),
+(6, 'Check'),
+(7, 'Cryptocurrency'),
+(8, 'Gift Card'),
+(9, 'Apple Pay'),
+(10, 'Google Pay');
+
+/* Insert into pagamento */
+INSERT INTO pagamento (id_pagamento, valor, data_pagamento, id_tipo_pagamento) VALUES
+(1, 100.00, '2024-08-23 10:00:00', 1),
+(2, 200.00, '2024-08-23 11:00:00', 2),
+(3, 300.00, '2024-08-23 12:00:00', 3),
+(4, 400.00, '2024-08-23 13:00:00', 4),
+(5, 500.00, '2024-08-23 14:00:00', 5),
+(6, 600.00, '2024-08-23 15:00:00', 6),
+(7, 700.00, '2024-08-23 16:00:00', 7),
+(8, 800.00, '2024-08-23 17:00:00', 8),
+(9, 900.00, '2024-08-23 18:00:00', 9),
+(10, 1000.00, '2024-08-23 19:00:00', 10);
+
+/* Insert into pedido */
+INSERT INTO pedido (id_pedido, data_compra, id_pagamento, id_cliente) VALUES
+(1, '2024-08-23 10:00:00', 1, 1),
+(2, '2024-08-23 11:00:00', 2, 2),
+(3, '2024-08-23 12:00:00', 3, 3),
+(4, '2024-08-23 13:00:00', 4, 4),
+(5, '2024-08-23 14:00:00', 5, 5),
+(6, '2024-08-23 15:00:00', 6, 6),
+(7, '2024-08-23 16:00:00', 7, 7),
+(8, '2024-08-23 17:00:00', 8, 8),
+(9, '2024-08-23 18:00:00', 9, 9),
+(10, '2024-08-23 19:00:00', 10, 10);
+
+/* Insert into marca */
+INSERT INTO marca (id_marca, nome) VALUES
+(1, 'Brand A'),
+(2, 'Brand B'),
+(3, 'Brand C'),
+(4, 'Brand D'),
+(5, 'Brand E'),
+(6, 'Brand F'),
+(7, 'Brand G'),
+(8, 'Brand H'),
+(9, 'Brand I'),
+(10, 'Brand J');
+
+/* Insert into produto */
+INSERT INTO produto (id_produto, nome, id_marca) VALUES
+(1, 'Product 1', 1),
+(2, 'Product 2', 2),
+(3, 'Product 3', 3),
+(4, 'Product 4', 4),
+(5, 'Product 5', 5),
+(6, 'Product 6', 6),
+(7, 'Product 7', 7),
+(8, 'Product 8', 8),
+(9, 'Product 9', 9),
+(10, 'Product 10', 10);
+
+/* Insert into item_pedido */
+INSERT INTO item_pedido (id_produto_pedido, preco, quantidade, id_pedido, id_produto) VALUES
+(1, 10.00, 1, 1, 1),
+(2, 20.00, 2, 2, 2),
+(3, 30.00, 3, 3, 3),
+(4, 40.00, 4, 4, 4),
+(5, 50.00, 5, 5, 5),
+(6, 60.00, 6, 6, 6),
+(7, 70.00, 7, 7, 7),
+(8, 80.00, 8, 8, 8),
+(9, 90.00, 9, 9, 9),
+(10, 100.00, 10, 10, 10);

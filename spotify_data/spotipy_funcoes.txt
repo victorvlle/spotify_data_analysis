@@ -1,0 +1,64 @@
+Lista de Funções da Biblioteca Spotipy
+
+  1. Funções do Usuário
+- sp.current_user() → Obtém informações do usuário autenticado.
+- sp.current_user_playlists(limit=20, offset=0) → Lista as playlists do usuário.
+- sp.current_user_saved_tracks(limit=20, offset=0) → Obtém músicas salvas na biblioteca.
+- sp.current_user_top_tracks(limit=20, time_range='medium_term') → Obtém as músicas mais ouvidas.
+- sp.current_user_top_artists(limit=20, time_range='medium_term') → Obtém os artistas mais ouvidos.
+- sp.current_user_followed_artists(limit=20) → Obtém os artistas seguidos.
+- sp.me() → Outra forma de obter dados do usuário.
+
+  2. Funções de Playlists
+- sp.user_playlist(user, playlist_id) → Obtém detalhes de uma playlist específica.
+- sp.playlist_tracks(playlist_id, limit=100) → Obtém as músicas de uma playlist.
+- sp.user_playlist_create(user, name, public=True) → Cria uma nova playlist.
+- sp.playlist_add_items(playlist_id, tracks) → Adiciona músicas a uma playlist.
+- sp.playlist_remove_all_occurrences_of_items(playlist_id, tracks) → Remove músicas da playlist.
+- sp.playlist_change_details(playlist_id, name=None, public=None) → Altera nome ou visibilidade.
+
+  3. Funções de Músicas
+- sp.track(track_id) → Obtém detalhes de uma música.
+- sp.tracks([track_id1, track_id2]) → Obtém detalhes de várias músicas.
+- sp.audio_features(track_id) → Obtém características de áudio (bpm, energia, etc.).
+- sp.recommendations(seed_tracks=[track_id]) → Obtém músicas recomendadas com base em uma música.
+- sp.current_playback() → Obtém o que está tocando no momento.
+- sp.start_playback(uris=[track_uri]) → Inicia a reprodução de uma música.
+- sp.pause_playback() → Pausa a música atual.
+- sp.next_track() → Pula para a próxima música.
+- sp.previous_track() → Volta para a música anterior.
+
+  4. Funções de Álbuns e Artistas
+- sp.album(album_id) → Obtém detalhes de um álbum.
+- sp.album_tracks(album_id) → Obtém as músicas de um álbum.
+- sp.artist(artist_id) → Obtém detalhes de um artista.
+- sp.artist_top_tracks(artist_id) → Obtém as músicas mais populares de um artista.
+- sp.artist_albums(artist_id, album_type='album') → Obtém os álbuns de um artista.
+
+  5. Funções de Busca
+- sp.search(q='nome da música', type='track', limit=10) → Busca músicas.
+- sp.search(q='nome do artista', type='artist', limit=10) → Busca artistas.
+- sp.search(q='nome do álbum', type='album', limit=10) → Busca álbuns.
+- sp.search(q='nome da playlist', type='playlist', limit=10) → Busca playlists.
+
+  6. Funções de Controle de Reprodução
+- sp.devices() → Obtém a lista de dispositivos conectados.
+- sp.transfer_playback(device_id, force_play=False) → Transfere a reprodução para outro dispositivo.
+- sp.seek_track(position_ms) → Define um ponto específico na música.
+- sp.repeat(state) → Ativa ou desativa o modo de repetição.
+- sp.shuffle(state) → Ativa ou desativa o modo aleatório.
+- sp.volume(volume_percent) → Ajusta o volume de 0 a 100.
+
+  7. Funções de Seguir e Curtir
+- sp.user_follow_artists(artist_ids) → Seguir artistas.
+- sp.user_follow_users(user_ids) → Seguir usuários.
+- sp.user_unfollow_artists(artist_ids) → Deixar de seguir artistas.
+- sp.user_unfollow_users(user_ids) → Deixar de seguir usuários.
+- sp.current_user_saved_albums() → Obtém álbuns salvos pelo usuário.
+- sp.current_user_saved_tracks() → Obtém músicas curtidas pelo usuário.
+
+  8. Outras Funções
+- sp.categories() → Obtém categorias de playlists populares.
+- sp.category_playlists(category_id) → Obtém playlists dentro de uma categoria.
+- sp.audio_analysis(track_id) → Obtém uma análise detalhada da música.
+- sp.new_releases(limit=10) → Obtém os álbuns mais recentes.
