@@ -2,3 +2,4 @@ spotify_data/extract/.cache
 spotify_data/extract/history_spotify.py
 spotify_data/music_scrap.py
 spotify_data/playlist_scrap.py
+spotify_data/.cache
