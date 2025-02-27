@@ -32,7 +32,7 @@ df_geral = df_musicas.select(
     "album_id",
     "album_name",
     "album_release_date",
-    "track_popularity",
+    "track_popularity"
 )
 
 df_artistas = df_geral.select(
@@ -40,4 +40,4 @@ df_artistas = df_geral.select(
     "artist_name"
 ).groupBy("artist_name").count().orderBy(col("count").desc())
 
-df_geral.show(100)
+df_geral.orderBy(col("track_popularity").desc()).show(150)
